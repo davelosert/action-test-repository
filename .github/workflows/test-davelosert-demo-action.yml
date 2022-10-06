@@ -1,0 +1,10 @@
+name: Test davelosert/daves-demo-action
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: davelosert/daves-demo-action@main
