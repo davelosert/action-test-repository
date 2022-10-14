@@ -3,7 +3,7 @@ name: Calling Workflow
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   call_branch_specific_workflow:
