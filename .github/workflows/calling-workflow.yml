@@ -1,0 +1,16 @@
+name: Calling Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      greeting:
+        description: 'The greeting to use'
+        required: true
+        default: 'Hello'
+
+jobs:
+  call_branch_specific_workflow:
+    name: Call Branch Specific Workflow
+    uses: ./.github/workflows/branched-workflow.yml@workflow-branch
+    with:
+      greeting: ${{ github.event.inputs.greeting }}
