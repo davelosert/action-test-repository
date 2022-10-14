@@ -2,8 +2,9 @@ name: Calling Workflow
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '*/5 * * * *'
+  # Works with schedules as well, but commented out to not continously consume my action minutes ;)
+  # schedule:
+  #   - cron: '*/5 * * * *'
 
 jobs:
   call_branch_specific_workflow:
