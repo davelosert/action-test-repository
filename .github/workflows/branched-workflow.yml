@@ -14,4 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Say Hello
-        run: echo "${{ inputs.greeting }}"
+        run: echo "${{ inputs.greeting }} World!"
