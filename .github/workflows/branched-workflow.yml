@@ -1,0 +1,16 @@
+name: Branch Specific Workflow
+
+on:
+  workflow_call:
+    inputs:
+      greeting:
+        description: 'The greeting to use'
+        required: true
+        default: 'Hello'
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "${{ inputs.greeting }}"
