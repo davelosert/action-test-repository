@@ -5,6 +5,7 @@ on:
     inputs:
       greeting:
         description: 'The greeting to use'
+        type: string
         required: true
         default: 'Hello'
 
