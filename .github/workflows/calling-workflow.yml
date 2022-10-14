@@ -11,6 +11,6 @@ on:
 jobs:
   call_branch_specific_workflow:
     name: Call Branch Specific Workflow
-    uses: ./.github/workflows/branched-workflow.yml@workflow-branch
+    uses: davelosert/action-test-repository/.github/workflows/branched-workflow.yml@workflow-branch
     with:
       greeting: ${{ github.event.inputs.greeting }}
