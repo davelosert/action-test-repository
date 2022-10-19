@@ -1,0 +1,11 @@
+name: Test Youtube Demo Action
+on:
+  workflow_dispatch:  
+  
+jobs:
+  test_youtube_action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: davelosert/daves-youtube-demo-action@v1.0.0
+        with:
+          person: 'Catwoman'
