@@ -1,0 +1,14 @@
+name: Failure Notification Workflow
+on:
+  workflow_dispatch:
+    
+jobs:
+  try:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1
+  catch:
+    runs-on: ubuntu-latest
+    if: failure()
+    steps:
+     - run: echo "This workflow failed!"
