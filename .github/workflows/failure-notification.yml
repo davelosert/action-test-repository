@@ -7,8 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: exit 1
-  catch:
-    runs-on: ubuntu-latest
-    if: failure()
-    steps:
-     - run: echo "This workflow failed!"
+      - if: failure()
+        run: echo "The previous step failed. This is still run."
+
