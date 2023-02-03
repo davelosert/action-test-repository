@@ -1,0 +1,17 @@
+name: Test Dependency Review PR Comment Addition
+
+on: 
+  pull_request:
+    branches: [main]
+
+jobs:
+  dependency-review:
+    name: Dependency Review PR Comment Addition
+    runs-on: self-hosted
+    steps:
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v3
+      - name: 'Dependency Review'
+        uses: davelosert/dependency-review-action@write-summary-to-pr
+        with:
+          comment-summary-in-pr: true

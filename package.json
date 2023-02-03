@@ -1,0 +1,23 @@
+{
+  "name": "action-test-repository",
+  "version": "1.0.0",
+  "description": "I use this repository to test my actions from an external source",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davelosert/action-test-repository.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davelosert/action-test-repository/issues"
+  },
+  "homepage": "https://github.com/davelosert/action-test-repository#readme",
+  "dependencies": {
+    "lodash": "4.17.20"
+  }
+}
