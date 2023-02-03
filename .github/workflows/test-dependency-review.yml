@@ -3,6 +3,9 @@ name: Test Dependency Review PR Comment Addition
 on: 
   pull_request:
     branches: [main]
+    
+permissions:
+  contents: read
 
 jobs:
   dependency-review:
