@@ -15,6 +15,6 @@ jobs:
       - name: 'Checkout Repository'
         uses: actions/checkout@v3
       - name: 'Dependency Review'
-        uses: davelosert/dependency-review-action@write-summary-to-pr
+        uses: davelosert/dependency-review-action@adjust_summary_format
         with:
           comment-summary-in-pr: true
