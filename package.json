@@ -19,5 +19,8 @@
   "homepage": "https://github.com/davelosert/action-test-repository#readme",
   "dependencies": {
     "lodash": "4.17.20"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "14.2.1"
   }
 }
