@@ -24,6 +24,6 @@ jobs:
         run: npx vitest --coverage
       - name: "Report Coverage"
         if: always() # Also generate the report if tests are failing
-        uses: sfer23/vitest-coverage-report-action@add-summary-files-coverage-mode
+        uses: davelosert/vitest-coverage-report-action@test-file-coverage-mode
         with:
           file-coverage-mode: 'changes'
