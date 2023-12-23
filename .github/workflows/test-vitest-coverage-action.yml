@@ -5,6 +5,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        branch: [${{ github.head_ref }}, 'main']
 
     permissions:
       # Required to checkout the code
@@ -12,6 +15,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.branch }}
       - name: "Install Node"
         uses: actions/setup-node@v4
         with:
@@ -19,10 +24,27 @@ jobs:
       - name: "Install Deps"
         run: npm install
       - name: "Test"
-        run: npx vitest --coverage
-
+        run: npx vitest --coverage.enabled true
       - name: "Upload Coverage"
         uses: actions/upload-artifact@v4
         with:
-          name: coverage
+          name: coverage-${{ matrix.branch }}
           path: coverage
+
+  report-coverage:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Download Coverage Artifacts"
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-${{ github.head_ref }}
+          path: coverage
+      - uses: actions/download-artifact@v4
+        with:
+          name: coverage-main
+          path: coverage-main
+      - name: 'Report Coverage'
+        uses:  davelosert/vitest-coverage-report-action@add-trend-indicator-build
+        with:
+          json-summary-compare-path: coverage-main/coverage-summary.json
