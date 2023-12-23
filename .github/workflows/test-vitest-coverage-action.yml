@@ -7,7 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        branch: [${{ github.head_ref }}, 'main']
+        branch:
+          - ${{ github.head_ref }},
+          - 'main']
 
     permissions:
       # Required to checkout the code
@@ -44,7 +46,7 @@ jobs:
         with:
           name: coverage-main
           path: coverage-main
-      - name: 'Report Coverage'
-        uses:  davelosert/vitest-coverage-report-action@add-trend-indicator-build
+      - name: "Report Coverage"
+        uses: davelosert/vitest-coverage-report-action@add-trend-indicator-build
         with:
           json-summary-compare-path: coverage-main/coverage-summary.json
