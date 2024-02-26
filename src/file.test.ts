@@ -9,5 +9,4 @@ describe('file', () => {
 	it('sub 1-1 = 0', () => {
 		expect(sub(1, 1)).toBe(0);
 	});
-	
 });
