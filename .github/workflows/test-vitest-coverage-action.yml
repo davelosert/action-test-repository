@@ -47,6 +47,6 @@ jobs:
           name: coverage-main
           path: coverage-main
       - name: "Report Coverage"
-        uses: davelosert/vitest-coverage-report-action@add-trend-indicator-build
+        uses: davelosert/vitest-coverage-report-action@2
         with:
           json-summary-compare-path: coverage-main/coverage-summary.json
