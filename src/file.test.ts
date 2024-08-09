@@ -6,6 +6,7 @@ describe('file', () => {
     expect(sum(1, 1)).toBe(2);
   });
 
+  // minor change
   it('sum 1+2 = 3', () => {
     expect(sum(1, 2)).toBe(3);
   });
