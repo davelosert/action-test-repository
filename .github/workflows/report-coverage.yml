@@ -20,5 +20,5 @@ jobs:
           script: |
             console.log(JSON.stringify(context, null, 2)
 
-      - uses: davelosert/vitest-coverage-report-action@2
+      - uses: davelosert/vitest-coverage-report-action@v2
         name: "Report Coverage"
