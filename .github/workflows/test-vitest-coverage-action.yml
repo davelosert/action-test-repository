@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         branch:
-          - ${{ github.head_ref }}
+          - ${{ github.sha }}
           - "main"
 
     permissions:
