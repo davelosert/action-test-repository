@@ -1,4 +1,4 @@
-// Add something
+// Add something here
 function sum(a: number, b: number): number {
   return a + b;
 };
