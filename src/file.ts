@@ -1,4 +1,4 @@
-// Add something here 2345
+// Add something here 23456
 function sum(a: number, b: number): number {
   return a + b;
 };
