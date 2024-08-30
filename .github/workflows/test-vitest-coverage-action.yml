@@ -21,7 +21,7 @@ jobs:
           ref: ${{ matrix.branch }}
           repository: ${{github.event.pull_request.head.repo.full_name}}
           fetch-depth: 0
-      - run: echo "Repo is '${{ github.repository }}', PR repo is ${{ github.ev.event.pull_request.head.repo.full_name }}"
+      - run: echo "Repo is '${{ github.repository }}', PR repo is ${{github.event.pull_request.head.repo.full_name}}"
       - name: "Install Node"
         uses: actions/setup-node@v4
         with:
