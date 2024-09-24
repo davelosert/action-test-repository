@@ -1,6 +1,7 @@
 name: "Test"
 on:
-  pull_request:
+  push:
+    branches: main
 
 jobs:
   test:
@@ -53,6 +54,7 @@ jobs:
           name: coverage-main
           path: coverage-main
       - name: "Report Coverage"
-        uses: davelosert/vitest-coverage-report-action@v2
+        uses: davelosert/vitest-coverage-report-action@test-automatic-pr
         with:
           json-summary-compare-path: coverage-main/coverage-summary.json
+          pr-number:  ${{ github.ref == 'refs/heads/main' && '' || 'auto' }}
