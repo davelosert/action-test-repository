@@ -59,4 +59,4 @@ jobs:
         uses: davelosert/vitest-coverage-report-action@test-automatic-pr
         with:
           json-summary-compare-path: coverage-main/coverage-summary.json
-          pr-number:  ${{ github.ref == 'refs/heads/main' && '' || 'auto' }}
+          pr-number:  ${{ github.ref == 'refs/heads/main' && 'none' || 'auto' }}
