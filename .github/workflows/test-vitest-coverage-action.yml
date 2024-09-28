@@ -54,7 +54,7 @@ jobs:
           name: coverage-main
           path: coverage-main
       - name: "Echo Ref"
-        run: echo ${{ github..ref }}
+        run: echo ${{ github.ref }}
       - name: "Report Coverage"
         uses: davelosert/vitest-coverage-report-action@test-automatic-pr
         with:
