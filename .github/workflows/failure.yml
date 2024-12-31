@@ -19,3 +19,8 @@ jobs:
       - name: Check if previous step succeeded
         if: failure()
         run: echo "The previous step failed!"
+
+      - name: Check if previous step succeeded
+        if: steps.run-command.outcome == 'success'
+        run: echo "The previous step succeeded!"
+
