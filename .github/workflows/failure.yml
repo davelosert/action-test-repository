@@ -17,7 +17,7 @@ jobs:
         id: run-command
 
       - name: Check if previous step succeeded
-        if: failure()
+        if: steps.run-command.outcome == 'failure'
         run: echo "The previous step failed!"
 
       - name: Check if previous step succeeded
