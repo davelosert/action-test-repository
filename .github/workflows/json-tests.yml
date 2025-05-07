@@ -1,0 +1,20 @@
+name: Generate and Access JSON
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-and-access-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate JSON
+        id: generate_json
+        run: |
+          # Create a JSON object and output it
+          echo '{ "property" : "value" }' >> $GITHUB_OUTPUT
+
+      - name: Access JSON Property
+        run: |
+          # Parse and access the JSON property
+          echo "The accessed property value is: ${{ fromJSON(steps.generate_json.outputs.jsonOutput).property }}"
