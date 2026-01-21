@@ -6,4 +6,4 @@ jobs:
   test-variables:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.repository.name }}
+      - run: echo ${{ github.repository.split('/')[1] }}
