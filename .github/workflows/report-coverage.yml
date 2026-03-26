@@ -22,3 +22,5 @@ jobs:
 
       - uses: davelosert/vitest-coverage-report-action@copilot/add-file-coverage-expand-option
         name: "Report Coverage"
+        with:
+          file-coverage-expanded: true
